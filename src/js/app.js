@@ -6,7 +6,7 @@ function eventPlanner() {
   pageSections(); // Page section single view -> pageSection.js
  
   // Shortcuts to Email/Passw SignUP Buttons.
-  this.registerWithEmail = document.getElementById('email-register');
+  //this.registerWithEmail = document.getElementById('email-register');
 
   // Shortcuts to Facebook Buttons.
   this.signInFacebookBtnReg = document.getElementById('facebook');
@@ -17,7 +17,7 @@ function eventPlanner() {
   this.signOutBtn = document.getElementById('log-out');
 
   // Sign Up with Email/Passw Button.
-  this.registerWithEmail.addEventListener('click', this.emailPasswordRegister.bind(this));
+  //this.registerWithEmail.addEventListener('click', this.emailPasswordRegister.bind(this));
   // Sign In With Facebook Buttons.
   this.signInFacebookBtnReg.addEventListener('click', this.signInFacebook.bind(this));
   // Sign In With Google Buttons.
@@ -40,44 +40,42 @@ eventPlanner.prototype.initFirebase = function() {
 };
 
 // Register with email and password
-eventPlanner.prototype.emailPasswordRegister = function(){
-  // var fullName = document.getElementById('fullName').value;
-  // var email = document.getElementById('email').value;
-  // var password = document.getElementById('password').value;
+// eventPlanner.prototype.emailPasswordRegister = function(){
+//   var fullName = document.getElementById('fullName').value;
+//   var email = document.getElementById('email').value;
+//   var password = document.getElementById('password').value;
 
-  // var errEmail = document.getElementById('errMessageEmail');
-  // var errPassword = document.getElementById('errMessagePassw');
+//   var errEmail = document.getElementById('errMessageEmail');
+//   var errPassword = document.getElementById('errMessagePassw');
 
-  // var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-  // var valid = re.test(email);
+//   var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+//   var valid = re.test(email);
 
-  // if(!valid){
-  //   errEmail.textContent = 'Please enter a valid email.';
-  // }
-  // if(email === ''){
-  //   errEmail.textContent = 'Don\'t forget your email.';
-  // }
-  // if(password === ''){
-  //   errPassword.textContent = 'Enter password';
-  // }
-  // this.auth.createUserWithEmailAndPassword(email, password).catch(function(error) {
+//   if(!valid){
+//     errEmail.textContent = 'Please enter a valid email.';
+//   }
+//   if(email === ''){
+//     errEmail.textContent = 'Don\'t forget your email.';
+//   }
+//   if(password === ''){
+//     errPassword.textContent = 'Enter password';
+//   }
+//   this.auth.createUserWithEmailAndPassword(email, password).catch(function(error) {
 
-  //       // Handle Errors here.
-  //       var errorCode = error.code;
-  //       var errorMessage = error.message;
-  //       // [START_EXCLUDE]
-  //       if (errorCode == 'auth/weak-password') {
-  //         alert('The password is too weak.');
-  //       } else {
-  //         alert(errorMessage);
-  //       }
-  //       console.log(error);
-  //       // [END_EXCLUDE]
-  //     });
-  //     // [END createwithemail]
-
-
-};
+//         // Handle Errors here.
+//         var errorCode = error.code;
+//         var errorMessage = error.message;
+//         // [START_EXCLUDE]
+//         if (errorCode == 'auth/weak-password') {
+//           alert('The password is too weak.');
+//         } else {
+//           alert(errorMessage);
+//         }
+//         console.log(error);
+//         // [END_EXCLUDE]
+//       });
+//       // [END createwithemail]
+// };
 
 
 // Sign-in with Facebook
@@ -127,7 +125,8 @@ eventPlanner.prototype.onAuthStateChanged = function(user) {
     document.getElementById('home').setAttribute('class', 'section-current');
 
 	}
+};
   
 window.onload = function() {
   window.eventPlanner = new eventPlanner();
-}
+};
