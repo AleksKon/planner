@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+    <title>Eventie</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Cookie|Dr+Sugiyama|Gloria+Hallelujah|Satisfy" rel="stylesheet">
+
+   <!-- build:css css/combined.css -->
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
+      <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css" >
+    <link rel="stylesheet" href="css/cover.css" >
+    <!-- endbuild -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+
+      <!--=== HOME ===--> 
+      <section id="home" class="page-active">
+      <div class="bg-img">
+      <div class="masthead clearfix">
+            <div class="inner">
+              <nav>
+                <ul id="nav-li" class="nav masthead-nav">
+                  <li><a class="registerLink" href="#register">Register</a></li>
+                  <li>|</li>
+                  <li><a class="signInLink" href="#sign-in">Sign in</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+        <div class="cover-container">
+
+          <div class="inner cover">
+            <div class="cover-heading">
+            <h1>eventie</h1>
+            </div>
+            <p class="lead">Eventie is an application for seamlessly creating and organizing life's most exciting events. Easily add, track and manage events. It's free and anyone can join.</p>
+            <p class="lead" id="registerLink">
+              <a href="#register" class="btn btn-lg  register-home">Register</a>
+            </p>
+          </div>
+        </div>
+        </div>
+      </section><!-- end of HOME section -->
+
+    <!--=== REGISTER ===--> 
+    <section id="register">
+       <div class="cover-container">
+
+          <div class="inner form">
+            <div class="cover-heading">
+              <h1 class="home-link"><a href="#home">eventie</a></h1>
+              <p>Sign up and start planning. It's free.</p>
+            </div>
+
+            <form method="" action="" >
+              <div class="form-group">
+                <label for="name" class="sr-only sr-only-focusable">Full Name</label>
+                 <p><span id="errMessageName" class="err"></span></p>
+                <input id="fullName" 
+                       class="form-control" 
+                       type="text"
+                       name="name" 
+                       placeholder="Full Name *" 
+                       autocomplete="name" 
+                       autofocus 
+                       required>
+              </div>
+              <div class="form-group" >
+                <label for="email" class="sr-only">Email</label>
+                <p><span id="errMessageEmail" class="err"></span></p>
+                <input id="email"
+                       class="form-control"  
+                       type="email" 
+                       name="email"   
+                       placeholder="john@email.com *" 
+                       autocomplete="email" 
+                       required>
+              </div>
+              <div class="form-group">
+                <label for="password" class="sr-only" tabindex='-1'>Password *</label>
+                <p><span id="errMessagePassw" class="err"></span></p>
+                <input id="password"
+                       class="form-control"
+                       type="password" 
+                       name="password"   
+                       placeholder="Password" 
+                       required>
+                <p><ul id="tips"></ul></p>          
+              </div>
+              <div class="form-group">
+                <label for="conf-password" class="sr-only">Confirm Password *</label>
+                <p><span id="errMessageCofirm" class="err"></span></p>
+                <input id="conf-password"
+                       class="form-control" 
+                       type="password" 
+                       name="conf-password"   
+                       placeholder="Confirm Password" 
+                       required>   
+              </div>
+              
+              <button id="email-register" type="submit" class="btn btn-lg btn-block register">Register</button>
+
+              <div class="form-group">
+                <p class="help-block">Have an account?<span class="signin-register"><a href="#sign-in"> Sign in</a></span></p>
+              </div> 
+              
+            </form>
+            <div class="hr">
+              <div class="line"></div>
+              <div class="or"> or </div>
+              <div class="line two"></div>
+            </div>
+            <button id="facebook" type="submit" class="btn btn-lg btn-block"><i class="fa fa-facebook" aria-hidden="true"></i>  Sign In With Facebook</button>
+
+            <button id="google" class="btn btn-lg btn-block"><i class="fa fa-google" aria-hidden="true"></i>  Sign In With Google</button>
+
+          </div>
+        </div>
+    </section><!-- end of REGISTER section -->
+
+    <!--=== DASHBOARD ===--> 
+    <section id="dashboard">
+      <div class="cover-container">
+          <button id="log-out" class="btn btn-lg pull-right register">Log Out</button>
+          <div class="inner form">
+            <div class="cover-heading">
+              <h1>dashboard</h1>
+              <p>Welcome <span id="user-name"></span></p>
+          </div>
+        </div>
+    </section><!-- end of DASHBOARD section -->
+
+    <!--=== SIGN-IN ONLY ===--> 
+    <section id="sign-in">
+      <div class="cover-container">
+          <div class="inner form">
+            <div class="cover-heading">
+              <h1 class="home-link"><a href="#home">eventie</a></h1>
+            </div>
+
+            <form>
+              <div class="form-group" >
+                <label for="email" class="sr-only">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="john@email.com" autocomplete="email" required autofocus>
+              </div>
+              <div class="form-group">
+                <label for="password" class="sr-only" tabindex='-1'>Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" required>
+              </div>
+              <button class="btn btn-lg btn-block signin">Sign In</button>
+              <div class="form-group">
+                <p class="help-block">By signing in you agree to our <span><a href="#"> Terms & Conditions</a></span></p>
+              </div>
+            </form>
+            <div class="hr">
+              <div class="line"></div>
+              <div class="or"> or </div>
+              <div class="line two"></div>
+            </div>
+            <button id="facebook" type="submit" class="btn btn-lg btn-block"><i class="fa fa-facebook" aria-hidden="true"></i>  Sign In With Facebook</button>
+
+            <button id="google-signin" type="submit" class="btn btn-lg btn-block"><i class="fa fa-google" aria-hidden="true"></i>  Sign In With Google</button>
+          </div>
+        </div>
+    </section><!-- end of SIGN-IN ONLY section -->
+
+      </div><!-- end of site-wrapper-inner -->
+    </div> <!-- end of site-wrapper -->
+
+    <!-- Firebase -->
+      <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyDH-6vsCI4LUPjZkOeSOsX0dZG0FzsqLbU",
+          authDomain: "eventie-aa774.firebaseapp.com",
+          databaseURL: "https://eventie-aa774.firebaseio.com",
+          storageBucket: "eventie-aa774.appspot.com",
+        };
+        firebase.initializeApp(config);
+      </script>
+    <!--  -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="vendor/jquery/dist/jquery.min.js"><\/script>')</script>
+
+    <!-- build:js js/combined.js -->
+    <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/pageSections.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/app.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
