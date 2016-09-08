@@ -20,6 +20,7 @@ function eventPlanner() {
   //this.registerWithEmail.addEventListener('click', this.emailPasswordRegister.bind(this));
   // Sign In With Facebook Buttons.
   this.signInFacebookBtnReg.addEventListener('click', this.signInFacebook.bind(this));
+  this.signInFacebookBtnReg.addEventListener('touch', this.signInFacebook.bind(this));
   // Sign In With Google Buttons.
   this.signInGoogleBtnReg.addEventListener('click', this.signInGoogle.bind(this));
   this.signInGoogleBtn.addEventListener('click', this.signInGoogle.bind(this));
@@ -107,10 +108,12 @@ eventPlanner.prototype.onAuthStateChanged = function(user) {
       console.log("  Photo URL: "+profile.photoURL);
     });
     // When User signs in,hide register/sign in and show dashboard 
-    document.getElementById('home').removeAttribute('class', 'page-active');
-    document.getElementById('sign-in').removeAttribute('class', 'section-current');
-    document.getElementById('register').removeAttribute('class', 'section-current');
-    document.getElementById('dashboard').setAttribute('class', 'section-current');
+    // document.getElementById('home').removeAttribute('class', 'page-active');
+    // document.getElementById('sign-in').removeAttribute('class', 'section-current');
+    // document.getElementById('register').removeAttribute('class', 'section-current');
+    // document.getElementById('dashboard').setAttribute('class', 'section-current');
+
+    window.location = 'test.html'
     
     //Grabb dashboard elements
     this.userName = document.getElementById('user-name');
